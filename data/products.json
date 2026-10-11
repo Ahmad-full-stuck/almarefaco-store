@@ -1,0 +1,75 @@
+[
+  {
+    "id": "almarefaco-01",
+    "slug": "almarefaco-01",
+    "name": "ملابس رياضية — المعرفة",
+    "type": "ملابس رياضية",
+    "categoryId": "clothing",
+    "description": "مجموعة ملابس رياضية من المعرفة — جودة عالية وأسعار منافسة.",
+    "price": 20000,
+    "image": "products/almarefaco/01.webp",
+    "images": [
+      "products/almarefaco/01.webp",
+      "products/almarefaco/02.webp",
+      "products/almarefaco/03.webp"
+    ],
+    "colors": [],
+    "colorsEnabled": false,
+    "specs": {},
+    "faqs": [],
+    "isNew": true,
+    "isFeatured": true,
+    "stockMeters": 70,
+    "createdAt": "2026-10-10T00:00:00.000Z",
+    "sourceUrl": "https://www.instagram.com/almarefaco/"
+  },
+  {
+    "id": "almarefaco-02",
+    "slug": "almarefaco-02",
+    "name": "إكسسوارات رياضية — المعرفة",
+    "type": "إكسسوارات",
+    "categoryId": "accessories",
+    "description": "تشكيلة إكسسوارات رياضية من المعرفة — قبعات، سوارس، وأكثر.",
+    "price": 10000,
+    "image": "products/almarefaco/04.webp",
+    "images": [
+      "products/almarefaco/04.webp",
+      "products/almarefaco/05.webp",
+      "products/almarefaco/06.webp"
+    ],
+    "colors": [],
+    "colorsEnabled": false,
+    "specs": {},
+    "faqs": [],
+    "isNew": true,
+    "isFeatured": false,
+    "stockMeters": 90,
+    "createdAt": "2026-10-10T00:00:00.000Z",
+    "sourceUrl": "https://www.instagram.com/almarefaco/"
+  },
+  {
+    "id": "almarefaco-03",
+    "slug": "almarefaco-03",
+    "name": "أحذية رياضية — المعرفة",
+    "type": "أحذية رياضية",
+    "categoryId": "shoes",
+    "description": "أحذية رياضية من المعرفة — مريحة ومتينة للاستخدام اليومي.",
+    "price": 35000,
+    "image": "products/almarefaco/07.webp",
+    "images": [
+      "products/almarefaco/07.webp",
+      "products/almarefaco/08.webp",
+      "products/almarefaco/09.webp",
+      "products/almarefaco/10.webp"
+    ],
+    "colors": [],
+    "colorsEnabled": false,
+    "specs": {},
+    "faqs": [],
+    "isNew": true,
+    "isFeatured": true,
+    "stockMeters": 45,
+    "createdAt": "2026-10-10T00:00:00.000Z",
+    "sourceUrl": "https://www.instagram.com/almarefaco/"
+  }
+]

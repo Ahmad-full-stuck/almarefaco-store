@@ -1,0 +1,26 @@
+[
+  {
+    "id": "clothing",
+    "slug": "clothing",
+    "name": "ملابس",
+    "description": "ملابس رياضية متنوعة",
+    "image": "products/almarefaco/01.webp",
+    "accent": "#2e7d32"
+  },
+  {
+    "id": "accessories",
+    "slug": "accessories",
+    "name": "إكسسوارات",
+    "description": "إكسسوارات مميزة",
+    "image": "products/almarefaco/04.webp",
+    "accent": "#f9a825"
+  },
+  {
+    "id": "shoes",
+    "slug": "shoes",
+    "name": "أحذية",
+    "description": "أحذية مريحة وعملية",
+    "image": "products/almarefaco/07.webp",
+    "accent": "#00695c"
+  }
+]
