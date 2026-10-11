@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState, type MouseEvent } from 'react'
+﻿import { useEffect, useLayoutEffect, useState, type MouseEvent } from 'react'
 import { Route, Switch, useLocation } from 'wouter'
 import { Link } from 'wouter'
 import { ArrowLeft, Check, ShoppingBag } from 'lucide-react'
@@ -15,7 +15,7 @@ import { ProductPage } from '@/pages/ProductPage'
 import { CartPage } from '@/pages/CartPage'
 import { CheckoutPage } from '@/pages/CheckoutPage'
 import { FavoritesPage } from '@/pages/FavoritesPage'
-import { AboutPage, ContactPage, FabricGuidePage, OrderConfirmationPage, OrderTrackingPage, PoliciesPage } from '@/pages/InfoPages'
+import { AboutPage, ContactPage, SizeGuidePage, OrderConfirmationPage, OrderTrackingPage, PoliciesPage } from '@/pages/InfoPages'
 import NotFound from '@/pages/not-found'
 
 const shellStyles = `
@@ -56,31 +56,31 @@ const shellStyles = `
 `
 
 const PAGE_SEO: Record<string, { title: string; desc: string }> = {
-  '/': { title: 'إيفا ستور للأقمشة | خامات مختارة تصنع الفرق', desc: 'متجر إيفا ستور للأقمشة: تعرفي على الخامة والمرونة والشفافية واللون، اختاري ما يناسب قطعك، واطلبي بنصف متر مع توصيل إلى جميع محافظات العراق.' },
-  '/catalog': { title: 'كل الأقمشة | إيفا ستور', desc: 'تصفحي أقمشة إيفا ستور: قطن، كريب، ساتان وأكثر — مع المرونة واللون والسعر لكل متر.' },
-  '/cart': { title: 'سلة المشتريات | إيفا ستور', desc: 'راجعي قماشك المختار وعدد الأمتار قبل إتمام الطلب.' },
-  '/checkout': { title: 'إتمام الطلب | إيفا ستور', desc: 'أدخلي بياناتك وعدد الأمتار لتأكيد طلب الأقمشة مع التوصيل إلى جميع محافظات العراق.' },
-  '/favorites': { title: 'المفضلة | إيفا ستور', desc: 'الأقمشة التي حفظتيها للرجوع إليها لاحقاً.' },
-  '/about': { title: 'من نحن | إيفا ستور', desc: 'قصة إيفا ستور وخامة تصنع الفرق.' },
-  '/fabric-guide': { title: 'دليل الأقمشة | إيفا ستور', desc: 'كيف تفرقي بين أنواع الأقمشة؟ دليل عملي بالأسئلة الشائعة عن المرونة والكثافة والعناية.' },
-  '/contact': { title: 'تواصلي معنا | إيفا ستور', desc: 'أرسلي رسالتك عبر نموذج التواصل في موقع إيفا ستور للاستفسار عن الأقمشة والتوصيل وتتبّع الطلبات.' },
-  '/policies': { title: 'السياسات والخصوصية | إيفا ستور', desc: 'سياسات الشحن والإرجاع والخصوصية الخاصة بمتجر إيفا ستور.' },
-  '/order-tracking': { title: 'تتبع الطلب | إيفا ستور', desc: 'تتبعي حالة طلبك برقم الطلب الخاص بك.' },
-  '/order-confirmation': { title: 'تم تسجيل طلبك | إيفا ستور', desc: 'تم تسجيل طلبك بنجاح، سنتواصل معك قريباً لتأكيد التفاصيل.' },
+  '/': { title: 'المعرفة | المعرفة', desc: 'متجر المعرفة: تعرفي على الخامة والمرونة والشفافية واللون، اختاري ما يناسب قطعك، واطلبي بنصف متر مع توصيل إلى جميع محافظات العراق.' },
+  '/catalog': { title: 'كل المنتجات | المعرفة', desc: 'تصفحي أقمشة المعرفة: قطن، كريب، ساتان وأكثر — مع المرونة واللون والسعر لكل متر.' },
+  '/cart': { title: 'سلة المشتريات | المعرفة', desc: 'راجعي منتجك المختار وعدد الأمتار قبل إتمام الطلب.' },
+  '/checkout': { title: 'إتمام الطلب | المعرفة', desc: 'أدخلي بياناتك وعدد الأمتار لتأكيد طلب الأقمشة مع التوصيل إلى جميع محافظات العراق.' },
+  '/favorites': { title: 'المفضلة | المعرفة', desc: 'الأقمشة التي حفظتيها للرجوع إليها لاحقاً.' },
+  '/about': { title: 'من نحن | المعرفة', desc: 'قصة المعرفة وخامة تصنع الفرق.' },
+  '/size-guide': { title: 'دليل المقاسات | المعرفة', desc: 'كيف تفرقي بين أنواع الأقمشة؟ دليل عملي بالأسئلة الشائعة عن المرونة والكثافة والعناية.' },
+  '/contact': { title: 'تواصلي معنا | المعرفة', desc: 'أرسلي رسالتك عبر نموذج التواصل في موقع المعرفة للاستفسار عن الأقمشة والتوصيل وتتبّع الطلبات.' },
+  '/policies': { title: 'السياسات والخصوصية | المعرفة', desc: 'سياسات الشحن والإرجاع والخصوصية الخاصة بمتجر المعرفة.' },
+  '/order-tracking': { title: 'تتبع الطلب | المعرفة', desc: 'تتبعي حالة طلبك برقم الطلب الخاص بك.' },
+  '/order-confirmation': { title: 'تم تسجيل طلبك | المعرفة', desc: 'تم تسجيل طلبك بنجاح، سنتواصل معك قريباً لتأكيد التفاصيل.' },
 }
 
 const PAGE_SEO_EN: Record<string, { title: string; desc: string }> = {
-  '/': { title: 'Eva Store Fabrics | Fabrics that make the difference', desc: 'Eva Store fabrics: learn about texture, stretch, opacity and color, choose what fits your piece, and order by the half meter with delivery across Iraq.' },
-  '/catalog': { title: 'All fabrics | Eva Store', desc: 'Browse Eva Store fabrics: cotton, crepe, satin and more — with stretch, color and price per meter.' },
-  '/cart': { title: 'Shopping cart | Eva Store', desc: 'Review your chosen fabric and meters before placing your order.' },
-  '/checkout': { title: 'Checkout | Eva Store', desc: 'Enter your details and meters to confirm your fabric order with delivery across Iraq.' },
-  '/favorites': { title: 'Favorites | Eva Store', desc: 'The fabrics you saved to come back to later.' },
-  '/about': { title: 'About us | Eva Store', desc: 'The story of Eva Store and a fabric that makes the difference.' },
-  '/fabric-guide': { title: 'Fabric guide | Eva Store', desc: 'How to tell fabric types apart? A practical guide with FAQs on stretch, density and care.' },
-  '/contact': { title: 'Contact us | Eva Store', desc: 'Send us a message through the Eva Store contact form about fabrics, delivery and order tracking.' },
-  '/policies': { title: 'Policies & privacy | Eva Store', desc: 'Shipping, returns and privacy policies for Eva Store.' },
-  '/order-tracking': { title: 'Track order | Eva Store', desc: 'Track your order status using your order number.' },
-  '/order-confirmation': { title: 'Order received | Eva Store', desc: 'Your order was registered successfully — we will contact you shortly to confirm the details.' },
+  '/': { title: 'Almarefaco | Fabrics that make the difference', desc: 'Almarefaco fabrics: learn about texture, stretch, opacity and color, choose what fits your piece, and order by the per piece with delivery across Iraq.' },
+  '/catalog': { title: 'All products | Almarefaco', desc: 'Browse Almarefaco fabrics: cotton, crepe, satin and more — with stretch, color and price per piece.' },
+  '/cart': { title: 'Shopping cart | Almarefaco', desc: 'Review your chosen fabric and meters before placing your order.' },
+  '/checkout': { title: 'Checkout | Almarefaco', desc: 'Enter your details and meters to confirm your fabric order with delivery across Iraq.' },
+  '/favorites': { title: 'Favorites | Almarefaco', desc: 'The fabrics you saved to come back to later.' },
+  '/about': { title: 'About us | Almarefaco', desc: 'The story of Almarefaco and a fabric that makes the difference.' },
+  '/size-guide': { title: 'Size guide | Almarefaco', desc: 'How to tell fabric types apart? A practical guide with FAQs on stretch, density and care.' },
+  '/contact': { title: 'Contact us | Almarefaco', desc: 'Send us a message through the Almarefaco contact form about fabrics, delivery and order tracking.' },
+  '/policies': { title: 'Policies & privacy | Almarefaco', desc: 'Shipping, returns and privacy policies for Almarefaco.' },
+  '/order-tracking': { title: 'Track order | Almarefaco', desc: 'Track your order status using your order number.' },
+  '/order-confirmation': { title: 'Order received | Almarefaco', desc: 'Your order was registered successfully — we will contact you shortly to confirm the details.' },
 }
 
 const safeDecode = (value: string): string => {
@@ -108,7 +108,7 @@ function AppShell() {
       : undefined
     const fallback = pathname.startsWith('/order-confirmation') ? seo['/order-confirmation'] : undefined
     const entry = product
-      ? { title: `${product.name} | ${lang === 'en' ? 'Eva Store' : 'إيفا ستور'}`, desc: product.description || seo['/catalog'].desc }
+      ? { title: `${product.name} | ${lang === 'en' ? 'Almarefaco' : 'المعرفة'}`, desc: product.description || seo['/catalog'].desc }
       : seo[pathname] ?? fallback
     document.title = entry?.title ?? seo['/'].title
     if (entry?.desc) document.querySelector('meta[name="description"]')?.setAttribute('content', entry.desc)
@@ -187,7 +187,7 @@ function AppShell() {
           <Route path="/checkout" component={() => <CheckoutPage cart={cart} onComplete={completeOrder} />} />
           <Route path="/favorites" component={() => <FavoritesPage {...pageProps} />} />
           <Route path="/about" component={AboutPage} />
-          <Route path="/fabric-guide" component={FabricGuidePage} />
+          <Route path="/size-guide" component={SizeGuidePage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/policies" component={PoliciesPage} />
           <Route path="/order-tracking" component={OrderTrackingPage} />
