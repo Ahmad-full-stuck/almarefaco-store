@@ -56,7 +56,7 @@ const shellStyles = `
 `
 
 const PAGE_SEO: Record<string, { title: string; desc: string }> = {
-  '/': { title: 'المعرفة | المعرفة', desc: 'متجر المعرفة: تعرّف على المنتج والمرونة والشفافية واللون، اختر ما يناسب قطعك، واطلب بقطعة واحدة مع توصيل إلى جميع محافظات العراق.' },
+  '/': { title: 'المعرفة | منتجات مختارة', desc: 'متجر المعرفة: تعرّف على المنتج والمرونة والشفافية واللون، اختر ما يناسب قطعك، واطلب بقطعة واحدة مع توصيل إلى جميع محافظات العراق.' },
   '/catalog': { title: 'كل المنتجات | المعرفة', desc: 'تصفح منتجات المعرفة: قطن، كريب، ساتان وأكثر — مع المرونة واللون وسعر القطعة.' },
   '/cart': { title: 'سلة المشتريات | المعرفة', desc: 'راجع منتجك المختار والكمية قبل إتمام الطلب.' },
   '/checkout': { title: 'إتمام الطلب | المعرفة', desc: 'أدخل بياناتك والكمية لتأكيد طلب المنتجات مع التوصيل إلى جميع محافظات العراق.' },
@@ -170,14 +170,14 @@ function AppShell() {
     event.preventDefault()
     document.getElementById('main-content')?.focus()
   }
-  const cartMeters = cart.reduce((sum, item) => sum + item.length, 0)
+  const cartPieces = cart.reduce((sum, item) => sum + item.length, 0)
   const pageProps = { products, categories, wishlist, onWish: toggleWishlist, onAdd: addToCart }
 
   return (
     <div className="app-shell" dir={lang === 'en' ? 'ltr' : 'rtl'}>
       <style>{shellStyles}</style>
       <a className="skip-link" href="#main-content" onClick={skipToContent}>{t('core.skipLink')}</a>
-      <SiteHeader routes={routes} products={products} cartMeters={cartMeters} wishlistCount={wishlist.length} />
+      <SiteHeader routes={routes} products={products} cartPieces={cartPieces} wishlistCount={wishlist.length} />
       <div id="main-content" className="app-main" tabIndex={-1}>
         <Switch>
           <Route path="/" component={() => <HomePage {...pageProps} />} />
