@@ -16,11 +16,11 @@
     "colors": [],
     "colorsEnabled": false,
     "specs": {
-      "composition": "قطن وبوليستر",
-      "width": "مقاس معتاد",
+      "composition": "بوليستر متعدد",
+      "width": "S – XL",
       "weight": "متوسط",
       "stretch": "مرن قليلاً",
-      "opacity": "ممتاز",
+      "opacity": "ممتازة",
       "finish": "ناعم",
       "use": "رياضة يومية",
       "care": "غسيل بارد"
@@ -30,7 +30,13 @@
     "isFeatured": true,
     "stockPieces": 50,
     "createdAt": "2026-10-10T00:00:00.000Z",
-    "sourceUrl": "https://www.instagram.com/almarefaco/"
+    "sourceUrl": "https://www.instagram.com/almarefaco/",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "almarefaco-02",
@@ -50,10 +56,10 @@
     "colorsEnabled": false,
     "specs": {
       "composition": "قطن وبوليستر",
-      "width": "مقاس معتاد",
+      "width": "S – XL",
       "weight": "متوسط",
       "stretch": "مرن قليلاً",
-      "opacity": "ممتاز",
+      "opacity": "ممتازة",
       "finish": "ناعم",
       "use": "رياضة يومية",
       "care": "غسيل بارد"
@@ -63,7 +69,13 @@
     "isFeatured": false,
     "stockPieces": 50,
     "createdAt": "2026-10-10T00:00:00.000Z",
-    "sourceUrl": "https://www.instagram.com/almarefaco/"
+    "sourceUrl": "https://www.instagram.com/almarefaco/",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ]
   },
   {
     "id": "almarefaco-03",
@@ -83,20 +95,28 @@
     "colors": [],
     "colorsEnabled": false,
     "specs": {
-      "composition": "قطن وبوليستر",
-      "width": "مقاس معتاد",
-      "weight": "متوسط",
+      "composition": "قماش شبكي ومطاط",
+      "width": "40 – 45",
+      "weight": "خفيف",
       "stretch": "مرن قليلاً",
-      "opacity": "ممتاز",
+      "opacity": "ممتازة",
       "finish": "ناعم",
-      "use": "رياضة يومية",
-      "care": "غسيل بارد"
+      "use": "رياضة ومشي يومي",
+      "care": "نظف بإسفنجة وتجنّب الغسيل الآلي"
     },
     "faqs": [],
     "isNew": true,
     "isFeatured": true,
     "stockPieces": 50,
     "createdAt": "2026-10-10T00:00:00.000Z",
-    "sourceUrl": "https://www.instagram.com/almarefaco/"
+    "sourceUrl": "https://www.instagram.com/almarefaco/",
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ]
   }
 ]
